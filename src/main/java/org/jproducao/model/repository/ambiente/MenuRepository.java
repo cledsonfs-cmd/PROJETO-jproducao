@@ -1,4 +1,7 @@
 package org.jproducao.model.repository.ambiente;
 
-public class MenuRepository {
+import org.jproducao.model.entity.ambiente.Menu;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MenuRepository extends JpaRepository<Menu,Integer> {
 }

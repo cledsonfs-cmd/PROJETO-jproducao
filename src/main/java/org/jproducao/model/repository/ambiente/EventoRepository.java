@@ -1,4 +1,7 @@
 package org.jproducao.model.repository.ambiente;
 
-public class EventoRepository {
+import org.jproducao.model.entity.ambiente.Evento;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EventoRepository extends JpaRepository<Evento,Integer> {
 }

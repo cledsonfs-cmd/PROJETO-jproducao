@@ -1,4 +1,7 @@
 package org.jproducao.model.repository.ambiente;
 
-public class LogRepository {
+import org.jproducao.model.entity.ambiente.Log;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LogRepository extends JpaRepository<Log,Integer> {
 }
