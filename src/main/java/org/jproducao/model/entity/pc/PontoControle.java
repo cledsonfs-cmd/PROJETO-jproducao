@@ -3,6 +3,8 @@ package org.jproducao.model.entity.pc;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.hibernate.validator.constraints.br.CPF;
+import org.jproducao.model.entity.pcp.Produto;
+import org.jproducao.model.entity.pcp.Setor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -25,7 +27,7 @@ public class PontoControle{
 
 	@ManyToOne
 	@JoinColumn(name = "id_locacao")
-	private Locacao locacao;
+	private Setor locacao;
 
 	@Column(name = "sub_setor")
 	private Boolean subSetor;

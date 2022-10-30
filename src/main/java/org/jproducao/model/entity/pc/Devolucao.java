@@ -3,7 +3,7 @@ package org.jproducao.model.entity.pc;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.hibernate.validator.constraints.br.CPF;
-import org.jproducao.model.entity.pcp.Empresa;
+import org.jproducao.model.entity.pcp.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -50,7 +50,7 @@ public class Devolucao{
 
 	@ManyToOne
 	@JoinColumn(name = "id_vendedor")
-	private Vendedor vendedor;
+	private Representante vendedor;
 
 	@ManyToOne
 	@JoinColumn(name = "id_cliente")
