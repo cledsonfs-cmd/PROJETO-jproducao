@@ -1,4 +1,7 @@
 package org.jproducao.model.repository.pc;
 
-public class ConsumoSetorRepository {
+import org.jproducao.model.entity.pc.ConsumoSetor;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ConsumoSetorRepository extends JpaRepository<ConsumoSetor,Integer> {
 }

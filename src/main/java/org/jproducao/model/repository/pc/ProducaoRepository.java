@@ -1,4 +1,7 @@
 package org.jproducao.model.repository.pc;
 
-public class ProducaoRepository {
+import org.jproducao.model.entity.pc.Producao;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProducaoRepository extends JpaRepository<Producao,Integer> {
 }

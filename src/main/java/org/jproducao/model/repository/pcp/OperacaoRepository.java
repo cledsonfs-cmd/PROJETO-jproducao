@@ -1,4 +1,7 @@
 package org.jproducao.model.repository.pcp;
 
-public class OperacaoRepository {
+import org.jproducao.model.entity.pcp.Operacao;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OperacaoRepository extends JpaRepository<Operacao,Integer> {
 }

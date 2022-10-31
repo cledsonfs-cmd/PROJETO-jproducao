@@ -1,4 +1,7 @@
 package org.jproducao.model.repository.pcp;
 
-public class EquipamentoRepository {
+import org.jproducao.model.entity.pcp.Equipamento;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EquipamentoRepository extends JpaRepository<Equipamento,Integer> {
 }

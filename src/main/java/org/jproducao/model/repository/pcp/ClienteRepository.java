@@ -1,4 +1,7 @@
 package org.jproducao.model.repository.pcp;
 
-public class ClienteRepository {
+import org.jproducao.model.entity.pcp.Cliente;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ClienteRepository extends JpaRepository<Cliente,Integer> {
 }

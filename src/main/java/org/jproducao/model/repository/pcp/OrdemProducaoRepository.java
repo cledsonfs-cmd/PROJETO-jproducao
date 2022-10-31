@@ -1,4 +1,7 @@
 package org.jproducao.model.repository.pcp;
 
-public class OrdemProducaoRepository {
+import org.jproducao.model.entity.pcp.OrdemProducao;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OrdemProducaoRepository extends JpaRepository<OrdemProducao,Integer> {
 }

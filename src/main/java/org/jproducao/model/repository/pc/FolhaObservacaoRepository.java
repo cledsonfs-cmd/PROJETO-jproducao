@@ -1,4 +1,7 @@
 package org.jproducao.model.repository.pc;
 
-public class FolhaObservacaoRepository {
+import org.jproducao.model.entity.pc.FolhaElemento;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface FolhaObservacaoRepository extends JpaRepository<FolhaElemento,Integer> {
 }
