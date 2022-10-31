@@ -1,4 +1,4 @@
 package org.jproducao.model.repository.pcp;
 
-public class MotivoPerda {
+public class MotivoPerdaRepository {
 }
