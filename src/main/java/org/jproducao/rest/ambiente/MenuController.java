@@ -1,8 +1,6 @@
 package org.jproducao.rest.ambiente;
 
-import org.jproducao.model.entity.ambiente.Log;
 import org.jproducao.model.entity.ambiente.Menu;
-import org.jproducao.model.repository.ambiente.LogRepository;
 import org.jproducao.model.repository.ambiente.MenuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -3,6 +3,7 @@ package org.jproducao.model.entity.pc;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.hibernate.validator.constraints.br.CPF;
+import org.jproducao.model.entity.pcp.LinhaProducao;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;

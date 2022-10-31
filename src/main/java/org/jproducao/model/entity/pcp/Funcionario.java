@@ -1,4 +1,4 @@
-﻿package org.jproducao.model.entity.pcp;
+package org.jproducao.model.entity.pcp;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 

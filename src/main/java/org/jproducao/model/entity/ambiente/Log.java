@@ -1,4 +1,4 @@
-﻿package org.jproducao.model.entity.ambiente;
+package org.jproducao.model.entity.ambiente;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
