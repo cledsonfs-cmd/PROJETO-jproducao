@@ -20,7 +20,7 @@ public class OrdemProducao {
 	private Funcionario funcionario;
 
 	@ManyToOne
-	@JoinColumn(name = "id_funcionario")
+	@JoinColumn(name = "id_empresa")
 	private Empresa empresa;
 
 	@ManyToOne
@@ -87,7 +87,7 @@ public class OrdemProducao {
 	private Boolean solicitacaoReprogramacao;
 
 	@ManyToOne
-	@Column(name = "disponibilizado_por")
+	@JoinColumn(name = "id_disponibilizado")
 	private Funcionario disponibilizadoPor;
 
 	@Column(name = "conclusao_usuario")

@@ -52,13 +52,13 @@ public class FolhaObservacao {
 	@Column
 	private LocalDate data;
 
-	@Column(name = "experiencia_servico")
+	@Column(name = "numero_operacao")
 	private Long numeroOperacao;
 
-	@Column(name = "experiencia_servico")
+	@Column(name = "numero_peca")
 	private Long numeroPeca;
 
-	@Column(name = "experiencia_servico")
+	@Column(name = "numero_maquina")
 	private Long numeroMaquina;
 
 	@Column
