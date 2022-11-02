@@ -21,17 +21,17 @@ public class Unidade{
 	@Column(length = 3)
 	private String abreviacao;
 
-	@Column(name = "data_criacao",updatable = false)
-	@JsonFormat(pattern = "dd/MM/yyyy")
-	private LocalDate data;
-
 	@Column(name = "data_update")
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate update;
 
+	@Column(name = "data_cadastro",updatable = false)
+	@JsonFormat(pattern = "dd/MM/yyyy")
+	private LocalDate dataCadastro;
+
 	@PrePersist
 	public void prePersist(){
-		setData(LocalDate.now());
+		setDataCadastro(LocalDate.now());
 		setUpdate(LocalDate.now());
 	}
 	

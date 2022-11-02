@@ -16,6 +16,9 @@ public class CartaoOP {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@Column
+	private String status;
+
 	@ManyToOne
 	@JoinColumn(name = "id_ordemproducao")
 	private OrdemProducao ordemProducao;
@@ -54,8 +57,9 @@ public class CartaoOP {
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate dataProducao;
 
-	@Column(length = 15)
-	private String maquina;
+	@ManyToOne
+	@JoinColumn(name = "id_maquina")
+	private Maquina maquina;
 
 	@Column(name = "quantidade_pesada")
 	private Double quantidadePesada;
@@ -64,17 +68,17 @@ public class CartaoOP {
 	@JoinColumn(name = "pesado_por")
 	private Funcionario pesadoPor;
 
-	@Column(name = "data",updatable = false)
-	@JsonFormat(pattern = "dd/MM/yyyy")
-	private LocalDate data;
-
 	@Column(name = "data_update")
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate update;
 
+	@Column(name = "data_cadastro",updatable = false)
+	@JsonFormat(pattern = "dd/MM/yyyy")
+	private LocalDate dataCadastro;
+
 	@PrePersist
 	public void prePersist(){
-		setData(LocalDate.now());
+		setDataCadastro(LocalDate.now());
 		setUpdate(LocalDate.now());
 	}
 }

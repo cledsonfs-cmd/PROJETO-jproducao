@@ -25,17 +25,17 @@ public class SubSetor{
 	@Column(length = 100)
 	private String descricao;
 
-	@Column(name = "data_criacao",updatable = false)
-	@JsonFormat(pattern = "dd/MM/yyyy")
-	private LocalDate data;
-
 	@Column(name = "data_update")
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate update;
 
+	@Column(name = "data_cadastro",updatable = false)
+	@JsonFormat(pattern = "dd/MM/yyyy")
+	private LocalDate dataCadastro;
+
 	@PrePersist
 	public void prePersist(){
-		setData(LocalDate.now());
+		setDataCadastro(LocalDate.now());
 		setUpdate(LocalDate.now());
 	}
 	

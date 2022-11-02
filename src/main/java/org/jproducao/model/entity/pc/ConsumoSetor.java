@@ -26,9 +26,9 @@ public class ConsumoSetor {
 	@JoinColumn(name = "id_unidade")
 	private Unidade unidade;
 
-	@Column(name = "data_criacao",updatable = false)
+	@Column(name = "data_cadastro",updatable = false)
 	@JsonFormat(pattern = "dd/MM/yyyy")
-	private LocalDate data;
+	private LocalDate dataCadastro;
 
 	@Column(name = "data_update")
 	@JsonFormat(pattern = "dd/MM/yyyy")
@@ -36,7 +36,7 @@ public class ConsumoSetor {
 
 	@PrePersist
 	public void prePersist(){
-		setData(LocalDate.now());
+		setDataCadastro(LocalDate.now());
 		setUpdate(LocalDate.now());
 	}
 	

@@ -19,9 +19,18 @@ public class Almoxarifado{
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate update;
 
+	@ManyToOne
+	@JoinColumn(name = "id_materia_prima")
+	private MateriaPrima materiaPrima;
+
+	@Column(name = "data_cadastro",updatable = false)
+	@JsonFormat(pattern = "dd/MM/yyyy")
+	private LocalDate dataCadastro;
+
 	@PrePersist
 	public void prePersist(){
 		setUpdate(LocalDate.now());
+		setDataCadastro(LocalDate.now());
 	}
 	
 }

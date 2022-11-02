@@ -61,26 +61,23 @@ public class Cliente
 	@Column(name="conta_contabil", length = 50)
 	private String contaContabil;
 
-	@Column(length = 20)
-	private String login;
-
 	@Column(name = "nome_fantasia", length = 150)
 	private String nomeFantasia;
 
 	@Column
 	private Boolean ativo;
 
-	@Column(name = "data_criacao",updatable = false)
-	@JsonFormat(pattern = "dd/MM/yyyy")
-	private LocalDate data;
-
 	@Column(name = "data_update")
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate update;
 
+	@Column(name = "data_cadastro",updatable = false)
+	@JsonFormat(pattern = "dd/MM/yyyy")
+	private LocalDate dataCadastro;
+
 	@PrePersist
 	public void prePersist(){
-		setData(LocalDate.now());
+		setDataCadastro(LocalDate.now());
 		setUpdate(LocalDate.now());
 	}
 	
