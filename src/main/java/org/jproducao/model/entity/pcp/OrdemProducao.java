@@ -1,6 +1,7 @@
 package org.jproducao.model.entity.pcp;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@CrossOrigin()
 public class OrdemProducao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
