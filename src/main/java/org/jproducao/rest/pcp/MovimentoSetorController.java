@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/movimento-setor")
+@CrossOrigin("*")
 public class MovimentoSetorController {
     private final MovimentoSetorRepository repository;
 

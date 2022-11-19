@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/funcionario")
+@CrossOrigin("*")
 public class FuncionarioController {
     private final FuncionarioRepository repository;
 

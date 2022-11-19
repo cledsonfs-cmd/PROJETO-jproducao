@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/carteira")
+@CrossOrigin("*")
 public class CarteiraController {
     private final CarteiraRepository repository;
 

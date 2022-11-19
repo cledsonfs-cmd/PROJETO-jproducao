@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/pedido")
+@CrossOrigin("*")
 public class PedidoController {
     private final PedidoRepository repository;
 

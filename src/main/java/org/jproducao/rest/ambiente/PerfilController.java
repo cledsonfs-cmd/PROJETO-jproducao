@@ -9,6 +9,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/perfil")
+@CrossOrigin("*")
 public class PerfilController {
     private final PerfilRepository repository;
 

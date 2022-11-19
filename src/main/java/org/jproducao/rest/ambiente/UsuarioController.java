@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/usuario")
+@CrossOrigin("*")
 public class UsuarioController {
     private final UsuarioRepository repository;
 

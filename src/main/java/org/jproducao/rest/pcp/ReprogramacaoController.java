@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/reprogramacao")
+@CrossOrigin("*")
 public class ReprogramacaoController {
     private final ReprogramacaoRepository repository;
 

@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/tela")
+@CrossOrigin("*")
 public class TelaController {
     private final TelaRepository repository;
 

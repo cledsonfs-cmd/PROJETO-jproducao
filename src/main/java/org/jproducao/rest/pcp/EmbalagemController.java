@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/embalagem")
+@CrossOrigin("*")
 public class EmbalagemController {
     private final EmbalagemRepository repository;
 

@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/tipo-setor")
+@CrossOrigin("*")
 public class TipoSetorController {
     private final TipoSetorRepository repository;
 

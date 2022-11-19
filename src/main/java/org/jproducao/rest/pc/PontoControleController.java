@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/ponto-controle")
+@CrossOrigin("*")
 public class PontoControleController {
     private final PontoControleRepository repository;
 

@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/setor")
+@CrossOrigin("*")
 public class SetorController {
     private final SetorRepository repository;
 

@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/evento")
+@CrossOrigin("*")
 public class EventoController {
     private final EventoRepository repository;
 

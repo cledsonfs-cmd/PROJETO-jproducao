@@ -12,6 +12,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/log")
+@CrossOrigin("*")
 public class LogController {
     private final LogRepository repository;
 

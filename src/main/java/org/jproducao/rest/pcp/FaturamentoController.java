@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/faturamento")
+@CrossOrigin("*")
 public class FaturamentoController {
     private final FaturamentoRepository repository;
 

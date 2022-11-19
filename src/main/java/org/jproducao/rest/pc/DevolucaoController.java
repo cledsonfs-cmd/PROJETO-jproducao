@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/devolucao")
+@CrossOrigin("*")
 public class DevolucaoController {
     private final DevolucaoRepository repository;
 

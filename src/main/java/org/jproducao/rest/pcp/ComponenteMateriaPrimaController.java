@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/componente-materia-prima")
+@CrossOrigin("*")
 public class ComponenteMateriaPrimaController {
     private final ComponenteMateriaPrimaRepository repository;
 

@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/processo")
+@CrossOrigin("*")
 public class ProcessoController {
     private final ProcessoRepository repository;
 

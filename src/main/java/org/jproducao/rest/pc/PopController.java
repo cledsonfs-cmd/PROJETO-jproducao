@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/pop")
+@CrossOrigin("*")
 public class PopController {
     private final PopRepository repository;
 

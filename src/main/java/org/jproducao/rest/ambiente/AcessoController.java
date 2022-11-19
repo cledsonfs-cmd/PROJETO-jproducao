@@ -11,6 +11,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/acesso")
+@CrossOrigin("*")
 public class AcessoController {
     private final AcessoRepository repository;
 

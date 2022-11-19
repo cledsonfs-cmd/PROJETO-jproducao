@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
-
+@RestController
+@RequestMapping("/api/empresa")
+@CrossOrigin("*")
 public class EmpresaController {
     private final EmpresaRepository repository;
 

@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/lote")
+@CrossOrigin("*")
 public class LoteController {
     private final LoteRepository repository;
 

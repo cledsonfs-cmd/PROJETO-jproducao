@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/cartao-op")
+@CrossOrigin("*")
 public class CartaoOPController {
     private final CartaoOPRepository repository;
 

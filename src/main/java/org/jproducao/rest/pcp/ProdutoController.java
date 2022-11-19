@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/produto")
+@CrossOrigin("*")
 public class ProdutoController {
     private final ProdutoRepository repository;
 

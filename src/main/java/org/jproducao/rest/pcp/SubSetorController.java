@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/sub-setor")
+@CrossOrigin("*")
 public class SubSetorController {
     private final SubSetorRepository repository;
 

@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/componente")
+@CrossOrigin("*")
 public class ComponenteController {
     private final ComponenteRepository repository;
 

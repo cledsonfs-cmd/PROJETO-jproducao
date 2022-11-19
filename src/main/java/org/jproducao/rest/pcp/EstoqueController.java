@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/estoque")
+@CrossOrigin("*")
 public class EstoqueController {
     private final EstoqueRepository repository;
 

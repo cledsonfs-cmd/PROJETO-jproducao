@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/")
+@CrossOrigin("*")
 public class ChatController {
     private final ChatRepository repository;
 

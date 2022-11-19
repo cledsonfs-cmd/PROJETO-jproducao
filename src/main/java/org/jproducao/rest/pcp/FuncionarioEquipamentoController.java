@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/funcionario-equipamento")
+@CrossOrigin("*")
 public class FuncionarioEquipamentoController {
     private final FuncionarioEquipamentoRepository repository;
 

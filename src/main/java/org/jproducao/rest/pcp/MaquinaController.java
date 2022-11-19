@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+@RestController
+@RequestMapping("/api/maquina")
+@CrossOrigin("*")
 public class MaquinaController {
     private final MaquinaRepository repository;
 
