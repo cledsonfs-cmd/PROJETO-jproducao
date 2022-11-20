@@ -12,7 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/api/consumo")
+@RequestMapping("/api/consumo-setor")
 @CrossOrigin("*")
 public class ConsumoSetorController {
     private final ConsumoSetorRepository repository;
