@@ -16,7 +16,7 @@ import java.time.LocalDate;
 public class Log {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column(name = "data_cadastro",updatable = false)
 	@JsonFormat(pattern = "dd/MM/yyyy")

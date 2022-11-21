@@ -20,7 +20,7 @@ import java.util.Date;
 public class Devolucao{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column(nullable = false, length = 8)
 	@NotEmpty(message = "{campo.codigo_pedido.obrigatorio}")

@@ -19,7 +19,7 @@ import java.util.Date;
 public class PrazoEntrega{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate data;

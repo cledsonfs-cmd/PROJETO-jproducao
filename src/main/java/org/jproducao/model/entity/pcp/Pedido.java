@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column( length = 8)
     private String codigo;

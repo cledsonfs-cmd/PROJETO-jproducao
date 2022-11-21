@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Maquina{
 	@Id
 	@GeneratedValue
-	private Long id;
+	private Integer id;
 
 	@Column(length = 100)
 	private String descricao;

@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Operacao{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@ManyToOne
 	@JoinColumn(name = "id_processo")

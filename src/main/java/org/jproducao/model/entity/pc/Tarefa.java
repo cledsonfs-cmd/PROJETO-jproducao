@@ -18,7 +18,7 @@ import java.util.Date;
 public class Tarefa{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@ManyToOne
 	@JoinColumn(name = "id_pop")

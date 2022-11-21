@@ -17,7 +17,7 @@ import java.time.LocalDate;
 public class Empresa{
 	@Id
 	@GeneratedValue
-	private Long id;
+	private Integer id;
 
 	@Column(name = "razao_social",nullable = false, length = 50)
 	@NotEmpty(message = "{campo.razao_social.obrigatorio}")

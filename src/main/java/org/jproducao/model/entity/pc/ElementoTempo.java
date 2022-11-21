@@ -18,7 +18,7 @@ import java.util.Date;
 public class ElementoTempo{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@ManyToOne
 	@JoinColumn(name = "id_elemento")

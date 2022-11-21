@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class SetorPerda {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column
 	private Double quantidade;

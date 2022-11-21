@@ -14,7 +14,7 @@ import java.time.LocalDate;
 public class Componente{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column(nullable = false, length = 10)
 	@NotEmpty(message = "{campo.codigo_componente.obrigatorio}")

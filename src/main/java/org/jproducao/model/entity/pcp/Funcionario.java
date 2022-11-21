@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Funcionario{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column(length = 10)
 	private String matricula;

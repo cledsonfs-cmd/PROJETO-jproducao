@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Lote {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(length = 7)
     private String codigo;

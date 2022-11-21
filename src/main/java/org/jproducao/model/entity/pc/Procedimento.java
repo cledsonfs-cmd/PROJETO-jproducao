@@ -18,7 +18,7 @@ import java.util.Date;
 public class Procedimento{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column
 	private Long sequencial;

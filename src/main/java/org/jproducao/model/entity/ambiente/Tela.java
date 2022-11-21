@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 public class Tela {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column(length = 150, nullable = false)
 	@NotNull(message = "{campo.descricao.obrigatorio}")

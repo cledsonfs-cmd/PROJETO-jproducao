@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Representante {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column(length = 5)
 	private String codigo;

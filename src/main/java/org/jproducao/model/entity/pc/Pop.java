@@ -19,7 +19,7 @@ import java.util.Date;
 public class Pop{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column(length = 6)
 	private String codigo;

@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Unidade{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column(length = 100)
 	private String descricao;

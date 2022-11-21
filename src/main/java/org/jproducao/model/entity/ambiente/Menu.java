@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 public class Menu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false,length = 25)
     @NotNull(message = "{campo.nome.obrigatorio}")

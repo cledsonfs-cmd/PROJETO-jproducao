@@ -22,7 +22,7 @@ import java.util.Date;
 public class FolhaObservacao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column
 	private String folha;

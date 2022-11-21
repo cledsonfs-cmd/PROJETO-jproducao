@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Almoxarifado{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column(name = "update")
 	@JsonFormat(pattern = "dd/MM/yyyy")
