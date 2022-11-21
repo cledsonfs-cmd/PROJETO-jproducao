@@ -19,10 +19,6 @@ public class Empresa{
 	@GeneratedValue
 	private Long id;
 
-	@Column(nullable = false, length = 8)
-	@NotEmpty(message = "{campo.codigo_empresa.obrigatorio}")
-	private String codigoEmpresa;
-
 	@Column(name = "razao_social",nullable = false, length = 50)
 	@NotEmpty(message = "{campo.razao_social.obrigatorio}")
 	private String razaoSocial;
@@ -31,9 +27,7 @@ public class Empresa{
 	@NotEmpty(message = "{campo.nome_reduzido.obrigatorio}")
 	private String nomeReduzido;
 
-	@Column(nullable = false)
-	@NotNull(message = "{campo.cnpj.obrigatorio}")
-	@CNPJ(message = "{campo.cnpj.invalido}")
+	@Column
 	private String cnpj;
 
 	@Column(length = 100)

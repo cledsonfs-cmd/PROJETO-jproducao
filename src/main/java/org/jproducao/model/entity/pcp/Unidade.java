@@ -21,6 +21,9 @@ public class Unidade{
 	@Column(length = 3)
 	private String abreviacao;
 
+	@Column
+	private Integer quantidade;
+
 	@Column(name = "data_update")
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate update;

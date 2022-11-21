@@ -20,10 +20,6 @@ public class Processo {
 	private Empresa empresa;
 
 	@ManyToOne
-	@JoinColumn(name = "id_processo")
-	private Processo processo;
-
-	@ManyToOne
 	@JoinColumn(name = "id_setor")
 	private Setor setor;
 

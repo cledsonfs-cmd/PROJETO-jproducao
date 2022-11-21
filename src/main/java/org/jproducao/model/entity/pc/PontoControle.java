@@ -11,6 +11,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -27,38 +28,11 @@ public class PontoControle{
 
 	@ManyToOne
 	@JoinColumn(name = "id_locacao")
-	private Setor locacao;
+	private Setor setor;
 
-	@Column(name = "sub_setor")
-	private Boolean subSetor;
-
-	@JsonFormat(pattern = "dd/MM/yyyy")
-	private LocalDate data;
-
-	@ManyToOne
-	@JoinColumn(name = "id_produto")
-	private Produto produto;
-
-	@Column
-	private Double quantidade;
-
-	@Column
-	private Double peso;
-
-	@Column
-	private Double valor;
-
-	@Column(length = 255)
-	private String observacao;
-
-	@Column
-	private String extra1;
-
-	@Column
-	private String extra2;
-
-	@Column
-	private String extra3;
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name="id_ponto_controle")
+	private List<PontoControleRegistro> registro;
 
 	@Column(name = "data_cadastro",updatable = false)
 	@JsonFormat(pattern = "dd/MM/yyyy")
