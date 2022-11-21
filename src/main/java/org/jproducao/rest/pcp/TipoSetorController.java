@@ -1,5 +1,6 @@
 package org.jproducao.rest.pcp;
 
+import org.jproducao.model.entity.pcp.Empresa;
 import org.jproducao.model.entity.pcp.TipoSetor;
 import org.jproducao.model.entity.pcp.Unidade;
 import org.jproducao.model.repository.pcp.TipoSetorRepository;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/tipo-setor")
@@ -27,7 +29,10 @@ public class TipoSetorController {
     public TipoSetor salvar(@RequestBody @Valid TipoSetor objeto){
         return repository.save(objeto);
     }
-
+    @GetMapping
+    public List<TipoSetor> getAll(){
+        return repository.findAll();
+    }
     @GetMapping("{id}")
     public TipoSetor acharPorId(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "TipoSetor não encontrado"));

@@ -1,5 +1,6 @@
 package org.jproducao.rest.pcp;
 
+import org.jproducao.model.entity.pcp.Empresa;
 import org.jproducao.model.entity.pcp.Maquina;
 import org.jproducao.model.entity.pcp.MateriaPrima;
 import org.jproducao.model.repository.pcp.MaquinaRepository;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/materia-prima")
@@ -33,6 +35,10 @@ public class MateriaPrimaController {
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "MateriaPrima não encontrado"));
     }
 
+    @GetMapping
+    public List<MateriaPrima> getAll(){
+        return repository.findAll();
+    }
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletar(@PathVariable Integer id){

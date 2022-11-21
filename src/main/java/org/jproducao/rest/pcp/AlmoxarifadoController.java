@@ -1,6 +1,7 @@
 package org.jproducao.rest.pcp;
 
 import org.jproducao.model.entity.pcp.Almoxarifado;
+import org.jproducao.model.entity.pcp.Empresa;
 import org.jproducao.model.entity.pcp.SubProcesso;
 import org.jproducao.model.repository.pcp.AlmoxarifadoRepository;
 import org.jproducao.model.repository.pcp.SubProcessoRepository;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/almoxarifado")
@@ -31,6 +33,11 @@ public class AlmoxarifadoController {
     @GetMapping("{id}")
     public Almoxarifado acharPorId(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Almoxarifado não encontrado"));
+    }
+
+    @GetMapping
+    public List<Almoxarifado> getAll(){
+        return repository.findAll();
     }
 
     @DeleteMapping("{id}")

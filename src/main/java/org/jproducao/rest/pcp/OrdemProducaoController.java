@@ -1,5 +1,6 @@
 package org.jproducao.rest.pcp;
 
+import org.jproducao.model.entity.pcp.Empresa;
 import org.jproducao.model.entity.pcp.Operacao;
 import org.jproducao.model.entity.pcp.OrdemProducao;
 import org.jproducao.model.repository.pcp.OperacaoRepository;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/ordem-producao")
@@ -32,7 +34,10 @@ public class OrdemProducaoController {
     public OrdemProducao acharPorId(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "OrdemProducao não encontrado"));
     }
-
+    @GetMapping
+    public List<OrdemProducao> getAll(){
+        return repository.findAll();
+    }
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletar(@PathVariable Integer id){

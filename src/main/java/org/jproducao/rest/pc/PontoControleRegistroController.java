@@ -2,6 +2,7 @@ package org.jproducao.rest.pc;
 
 import org.jproducao.model.entity.pc.PontoControle;
 import org.jproducao.model.entity.pc.PontoControleRegistro;
+import org.jproducao.model.entity.pcp.Empresa;
 import org.jproducao.model.repository.pc.PontoControleRegistroRepository;
 import org.jproducao.model.repository.pc.PontoControleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/ponto-controle-registro")
@@ -32,7 +34,10 @@ public class PontoControleRegistroController {
     public PontoControleRegistro acharPorId(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "PontoControleRegistro não encontrado"));
     }
-
+    @GetMapping
+    public List<PontoControleRegistro> getAll(){
+        return repository.findAll();
+    }
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletar(@PathVariable Integer id){

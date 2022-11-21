@@ -2,6 +2,7 @@ package org.jproducao.rest.pc;
 
 import org.jproducao.model.entity.pc.ElementoTempo;
 import org.jproducao.model.entity.pc.FolhaElemento;
+import org.jproducao.model.entity.pcp.Empresa;
 import org.jproducao.model.repository.pc.ElementoTempoRepository;
 import org.jproducao.model.repository.pc.FolhaElementoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/folha-elemento")
@@ -32,7 +34,10 @@ public class FolhaElementoController {
     public FolhaElemento acharPorId(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "FolhaElemento não encontrado"));
     }
-
+    @GetMapping
+    public List<FolhaElemento> getAll(){
+        return repository.findAll();
+    }
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletar(@PathVariable Integer id){

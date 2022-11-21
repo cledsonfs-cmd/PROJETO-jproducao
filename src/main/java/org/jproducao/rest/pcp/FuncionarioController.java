@@ -1,5 +1,6 @@
 package org.jproducao.rest.pcp;
 
+import org.jproducao.model.entity.pcp.Empresa;
 import org.jproducao.model.entity.pcp.Faturamento;
 import org.jproducao.model.entity.pcp.Funcionario;
 import org.jproducao.model.repository.pcp.FaturamentoRepository;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/funcionario")
@@ -31,6 +33,11 @@ public class FuncionarioController {
     @GetMapping("{id}")
     public Funcionario acharPorId(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Funcionario não encontrado"));
+    }
+
+    @GetMapping
+    public List<Funcionario> getAll(){
+        return repository.findAll();
     }
 
     @DeleteMapping("{id}")

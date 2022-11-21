@@ -1,6 +1,7 @@
 package org.jproducao.rest.ambiente;
 
 import org.jproducao.model.entity.ambiente.Acesso;
+import org.jproducao.model.entity.pcp.Empresa;
 import org.jproducao.model.repository.ambiente.AcessoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/acesso")
@@ -30,7 +32,10 @@ public class AcessoController {
     public Acesso acharPorId(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Acesso não encontrado"));
     }
-
+    @GetMapping
+    public List<Acesso> getAll(){
+        return repository.findAll();
+    }
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletar(@PathVariable Integer id){

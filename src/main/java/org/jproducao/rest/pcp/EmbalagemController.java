@@ -2,6 +2,7 @@ package org.jproducao.rest.pcp;
 
 import org.jproducao.model.entity.pcp.ComponenteProcesso;
 import org.jproducao.model.entity.pcp.Embalagem;
+import org.jproducao.model.entity.pcp.Empresa;
 import org.jproducao.model.repository.pcp.ComponenteProcessoRepository;
 import org.jproducao.model.repository.pcp.EmbalagemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/embalagem")
@@ -31,6 +33,11 @@ public class EmbalagemController {
     @GetMapping("{id}")
     public Embalagem acharPorId(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Embalagem não encontrado"));
+    }
+
+    @GetMapping
+    public List<Embalagem> getAll(){
+        return repository.findAll();
     }
 
     @DeleteMapping("{id}")

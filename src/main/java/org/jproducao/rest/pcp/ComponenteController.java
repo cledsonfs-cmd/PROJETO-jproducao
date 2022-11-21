@@ -2,6 +2,7 @@ package org.jproducao.rest.pcp;
 
 import org.jproducao.model.entity.pcp.Cliente;
 import org.jproducao.model.entity.pcp.Componente;
+import org.jproducao.model.entity.pcp.Empresa;
 import org.jproducao.model.repository.pcp.ClienteRepository;
 import org.jproducao.model.repository.pcp.ComponenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/componente")
@@ -33,6 +35,10 @@ public class ComponenteController {
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Componente não encontrado"));
     }
 
+    @GetMapping
+    public List<Componente> getAll(){
+        return repository.findAll();
+    }
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletar(@PathVariable Integer id){

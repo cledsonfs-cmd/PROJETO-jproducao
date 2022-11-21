@@ -2,6 +2,7 @@ package org.jproducao.rest.pcp;
 
 import org.jproducao.model.entity.pcp.Almoxarifado;
 import org.jproducao.model.entity.pcp.CartaoOP;
+import org.jproducao.model.entity.pcp.Empresa;
 import org.jproducao.model.repository.pcp.AlmoxarifadoRepository;
 import org.jproducao.model.repository.pcp.CartaoOPRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/cartao-op")
@@ -31,6 +33,11 @@ public class CartaoOPController {
     @GetMapping("{id}")
     public CartaoOP acharPorId(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "CartaoOP não encontrado"));
+    }
+
+    @GetMapping
+    public List<CartaoOP> getAll(){
+        return repository.findAll();
     }
 
     @DeleteMapping("{id}")

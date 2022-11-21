@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/empresa")
 @CrossOrigin("*")
@@ -31,6 +33,11 @@ public class EmpresaController {
     @GetMapping("{id}")
     public Empresa acharPorId(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Empresa não encontrado"));
+    }
+
+    @GetMapping
+    public List<Empresa> getAll(){
+        return repository.findAll();
     }
 
     @DeleteMapping("{id}")

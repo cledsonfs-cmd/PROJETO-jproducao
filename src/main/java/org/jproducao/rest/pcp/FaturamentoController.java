@@ -1,5 +1,6 @@
 package org.jproducao.rest.pcp;
 
+import org.jproducao.model.entity.pcp.Empresa;
 import org.jproducao.model.entity.pcp.Estoque;
 import org.jproducao.model.entity.pcp.Faturamento;
 import org.jproducao.model.repository.pcp.EstoqueRepository;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/faturamento")
@@ -31,6 +33,11 @@ public class FaturamentoController {
     @GetMapping("{id}")
     public Faturamento acharPorId(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Faturamento não encontrado"));
+    }
+
+    @GetMapping
+    public List<Faturamento> getAll(){
+        return repository.findAll();
     }
 
     @DeleteMapping("{id}")
