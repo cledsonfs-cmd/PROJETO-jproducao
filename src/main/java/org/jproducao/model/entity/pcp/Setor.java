@@ -27,7 +27,7 @@ public class Setor {
 
 	@ManyToOne
 	@JoinColumn(name = "id_tipo_setor")
-	private TipoSetor tipo;
+	private TipoSetor tipoSetor;
 
 	@Column(length = 3)
 	private String abreviado;
